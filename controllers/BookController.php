@@ -1,0 +1,31 @@
+<?php
+
+include "./models/Book.php";
+
+class BookController{
+
+    public static function index()
+    {
+        $books = Book::all();
+        return $books;
+    }
+
+    public static function show(){
+
+        return Book::find($_GET['id']);
+    }
+
+    public static function store(){
+        Book::create();
+    }
+
+    public static function update(){
+        $book = new Book($_POST['id'], $_POST['title'], $_POST['genre'], $_POST['author_id']);
+        $book->update();
+    }
+
+    public static function destroy(){
+
+        Book::destroy($_POST['id']);
+    }
+}
