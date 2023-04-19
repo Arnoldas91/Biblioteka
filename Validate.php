@@ -3,7 +3,7 @@
 class Validate
 {
 
-    public static function Book() //jei naudosime updatinimui, reikia tikrinti ar POSTe yra id(book) ir Jei taip - tikrinti ar tas id atititinka realia knyga
+    public static function Book() 
     {
         $author = Author::find($_POST['authorId']);
         if (strlen($_POST['title']) == 0) {
@@ -14,13 +14,7 @@ class Validate
             $_SESSION['errors']['genre'] = "Įveskite knygos žanrą";
         }
 
-        // $hasAuthor = false;
-        // foreach ($authors as $author) {
-        //     if ($author->id == $_POST['authorId']) {
-        //         $hasAuthor = true;
-        //         break;
-        //     }
-        // }
+       
 
         if ($author->id == null) {
             $_SESSION['errors']['author'] = "Tokio autoriaus nėra";

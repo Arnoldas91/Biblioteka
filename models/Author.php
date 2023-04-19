@@ -40,34 +40,6 @@ public static function find($id){
 }
 
 
-// public static function create(){
-//     $db = new DB();
-//     $stmt = $db->conn->prepare("INSERT INTO `books`(`title`, `genre`, `author_id`) VALUES (?,?,?)");
-//     $stmt->bind_param("ssi",$_POST['title'], $_POST['genre'],$_POST['author_id']);
-//     $stmt->execute();
-//     $stmt->close();
-//     $db->conn->close();
-// }
-
-// public function update(){
-//     $db = new DB();
-//     $stmt = $db->conn->prepare("UPDATE `books` SET `title`= ?,`genre`=?,`author_id`=? WHERE `id` = ?");
-//     $stmt->bind_param("ssii",$this->title, $this->genre, $this->authorId, $this->id);
-//     $stmt->execute();
-//     $stmt->close();
-//     $db->conn->close();
-// }
-
-// public static function destroy($id){
-//     $db = new DB();
-//     $stmt = $db->conn->prepare("DELETE FROM `books` WHERE `id` = ?");
-//     $stmt->bind_param("i",$id);
-//     $stmt->execute();
-
-//     $stmt->close();
-//     $db->conn->close(); 
-// }
-
 }
 
 

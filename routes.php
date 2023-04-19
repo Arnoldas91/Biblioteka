@@ -8,21 +8,21 @@ $books = BookController::index();
 
 if ($_SERVER['REQUEST_METHOD'] == "POST") {
     
-    // Arba išsaugosim knygą
+    
     if (isset($_POST['save'])) {
         BookController::store();
         header("Location: ./index.php");
         die;
     }
 
-    //Arba atnaujinsim knygą
+    
     if (isset($_POST['update'])) {
         BookController::update();
         header("Location: ./index.php");
         die;
     }
 
-    //arba ištrinsim knygą
+    
     if (isset($_POST['destroy'])) {
        BookController::destroy();
        header("Location: ./index.php");
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
         $books = BookController::sortFilter();
     }
 
-    // atvaizduosim knygą
+    
 
 
 }
@@ -49,5 +49,4 @@ if ($_SERVER['REQUEST_METHOD'] == "GET") {
 
 
 
-//paimti visas knygas
 
